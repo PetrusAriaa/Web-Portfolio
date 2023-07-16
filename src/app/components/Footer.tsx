@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Footer = () => {
     return (
-        <footer id="footer" className="flex flex-col justify-center pt-36 px-64">
+        <footer id="footer" className="flex flex-col justify-center pt-36 px-64 bg-myBlack2">
             <div className="space-y-4">
                 <h1 className="text-myBlue1 font-semibold text-5xl">Petrus Aria</h1>
                 <h1 className="text-myWhite font-semibold text-5xl">Website Developer</h1>
