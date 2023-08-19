@@ -9,7 +9,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center text-myWhite font-semibold w-full min-h-screen"
+      className="relative z-[20] bg-myBlack flex flex-col items-center justify-center text-myWhite font-semibold w-full min-h-screen"
     >
       <div className="w-2/3 flex flex-col gap-4">
         <div className="flex flex-col gap-4">
