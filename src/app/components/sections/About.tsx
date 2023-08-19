@@ -1,12 +1,11 @@
 "use client"
 
-import {SiJavascript, SiTypescript, SiPython} from "react-icons/si";
 import {LanguageBadge} from "../ui/LanguageBadge";
 import { useState } from "react";
 import {category} from "./category"
 
 export const About = () => {
-  const [currCategory, setCurrCategory] = useState(category.Frontend)
+  const [currCategory, setCurrCategory] = useState(category.Languages)
   return (
     <section
       id="about"
@@ -24,18 +23,21 @@ export const About = () => {
         </div>
         <div className="flex flex-row justify-between">
           <div>
-          <ul className="flex flex-row gap-8">
-            <li onClick={()=>setCurrCategory(category.Languages)} className="cursor-pointer font-medium py-1 hover:border-b">Languages</li>
-            <li onClick={()=>setCurrCategory(category.Frontend)} className="cursor-pointer font-medium py-1 hover:border-b">Frontend</li>
-            <li className="cursor-pointer font-medium py-1 hover:border-b">Backend</li>
-            <li className="cursor-pointer font-medium py-1 hover:border-b">Tools</li>
-          </ul>
-          <div>{currCategory.map((item, i)=>{
-            return(
-              <p key={i}>{item.title}</p>
-            )
-          })}
-          </div>
+            <ul className="flex flex-row gap-8">
+              <li onClick={()=>setCurrCategory(category.Languages)} className="cursor-pointer font-medium py-1 hover:border-b">Languages</li>
+              <li onClick={()=>setCurrCategory(category.Frontend)} className="cursor-pointer font-medium py-1 hover:border-b">Frontend</li>
+              <li onClick={()=>setCurrCategory(category.Backend)}  className="cursor-pointer font-medium py-1 hover:border-b">Backend</li>
+              <li onClick={()=>setCurrCategory(category.Tools)} className="cursor-pointer font-medium py-1 hover:border-b">Tools</li>
+            </ul>
+            <div className="grid grid-cols-3 text-center gap-4">
+              {
+                currCategory.map((item, i)=>{
+                  return(
+                    <LanguageBadge key={i} color={item.color ? item.color : "bg-[#2F74C0] text-myBlack"} icon={item.icon}>{item.title}</LanguageBadge>
+                  )
+                })
+              }
+            </div>
           </div>
           <div className="h-96 w-72 bg-slate-300/30 animate-pulse"></div>
           {/* <div>
