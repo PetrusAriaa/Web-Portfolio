@@ -9,9 +9,11 @@ interface LanguageBadgeProps extends HTMLAttributes<LanguageBadgeProps> {
 
 export const LanguageBadge: FC <LanguageBadgeProps> = ({icon, children, color}) => {
     return(
-        <div className={`${color} flex flex-row justify-center items-center gap-2 font-normal px-6 py-1 rounded-md`}>
-            <div>{icon}</div>
-            <h1>{children}</h1>
+        <div className="flex flex-row justify-center items-center ">
+            <div className={`${color} cursor-pointer flex flex-row justify-center items-center gap-2 font-normal py-1 w-4/5 rounded-md`}>
+                <div>{icon}</div>
+                <h1>{children}</h1>
+            </div>
         </div>
     )
 }

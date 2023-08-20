@@ -3,16 +3,20 @@
 import {LanguageBadge} from "../ui/LanguageBadge";
 import { useState } from "react";
 import {category} from "./category"
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 export const About = () => {
   const [currCategory, setCurrCategory] = useState(category.Languages)
+  const [swiper, setSwiper] = useState<any>(null)
+  const [activeSwiper, setActiveSwiper] = useState(0)
   return (
     <section
       id="about"
-      className="relative z-[20] bg-myBlack flex flex-col items-center justify-center text-myWhite font-semibold w-full min-h-screen"
+      className="relative z-[20] bg-myBlack flex flex-col items-center justify-center text-myWhite font-semibold min-h-screen"
     >
-      <div className="w-2/3 flex flex-col gap-4">
-        <div className="flex flex-col gap-4">
+      <div className="w-4/5 flex flex-col gap-4 ">
+        <div className="flex flex-col gap-4 ">
           <h1 className="text-myBlue1 text-5xl">Backstory</h1>
           <h1 className="text-myWhite font-normal text-lg">
             Petrus Aria is an Information Engineering student from Indonesia. He
@@ -21,54 +25,58 @@ export const About = () => {
             anytime.
           </h1>
         </div>
-        <div className="flex flex-row justify-between">
-          <div>
+        <div className="flex flex-row justify-center gap-10 ">
+          <div className="w-2/3 flex flex-col gap-10">
             <ul className="flex flex-row gap-8">
-              <li onClick={()=>setCurrCategory(category.Languages)} className="cursor-pointer font-medium py-1 hover:border-b">Languages</li>
-              <li onClick={()=>setCurrCategory(category.Frontend)} className="cursor-pointer font-medium py-1 hover:border-b">Frontend</li>
-              <li onClick={()=>setCurrCategory(category.Backend)}  className="cursor-pointer font-medium py-1 hover:border-b">Backend</li>
-              <li onClick={()=>setCurrCategory(category.Tools)} className="cursor-pointer font-medium py-1 hover:border-b">Tools</li>
+              <li onClick={()=>setCurrCategory(category.Languages)} className="cursor-pointer font-medium py-1">Languages</li>
+              <li onClick={()=>setCurrCategory(category.Frontend)} className="cursor-pointer font-medium py-1">Frontend</li>
+              <li onClick={()=>setCurrCategory(category.Backend)}  className="cursor-pointer font-medium py-1">Backend</li>
+              <li onClick={()=>setCurrCategory(category.Tools)} className="cursor-pointer font-medium py-1">Tools</li>
             </ul>
-            <div className="grid grid-cols-3 text-center gap-4">
-              {
-                currCategory.map((item, i)=>{
-                  return(
-                    <LanguageBadge key={i} color={item.color ? item.color : "bg-[#2F74C0] text-myBlack"} icon={item.icon}>{item.title}</LanguageBadge>
-                  )
-                })
-              }
+            <div className="">
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={100}
+                className="w-[90%] !overflow-y-visible"
+                grabCursor
+                onSwiper={setSwiper}
+                onSlideChange={(swiper)=>console.log(swiper.activeIndex)}
+              >
+                <SwiperSlide>
+                    <div className="grid grid-cols-3 text-center gap-y-8">
+                      {category.Languages.map((item, index)=>{
+                        return <LanguageBadge key={index} color={item.color ? item.color : "bg-myWhite text-myBlack"} icon={item.icon}>{item.title}</LanguageBadge>
+                      })}
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide >
+                  <div className="grid grid-cols-3 text-center gap-y-8">
+                    {category.Frontend.map((item, index)=>{
+                      return <LanguageBadge key={index} color={item.color ? item.color : "bg-myWhite text-myBlack"} icon={item.icon}>{item.title}</LanguageBadge>
+                    })}
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide >
+                  <div className="grid grid-cols-3 text-center gap-y-8">
+                    {category.Backend.map((item, index)=>{
+                      return <LanguageBadge key={index} color={item.color ? item.color : "bg-myWhite text-myBlack"} icon={item.icon}>{item.title}</LanguageBadge>
+                    })}
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide >
+                  <div className="grid grid-cols-3 text-center gap-4">
+                    {category.Tools.map((item, index)=>{
+                      return <LanguageBadge key={index} color={item.color ? item.color : "bg-myWhite text-myBlack"} icon={item.icon}>{item.title}</LanguageBadge>
+                    })}
+                  </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
-          <div className="h-96 w-72 bg-slate-300/30 animate-pulse"></div>
-          {/* <div>
-            <ul className="grid grid-cols-3 text-center gap-x-4 gap-y-4">
-              <li>
-                <LanguageBadge
-                  color={"bg-[#EFD81D] text-myBlack"}
-                  icon={<SiJavascript size={20} />}
-                >
-                  Javascript
-                </LanguageBadge>
-              </li>
-              <li>
-                <LanguageBadge
-                  color={"bg-[#2F74C0] text-myBlack"}
-                  icon={<SiTypescript size={20} />}
-                >
-                  Typescript
-                </LanguageBadge>
-              </li>
-              <li>
-                <LanguageBadge
-                  color={"bg-[#366C9C] text-myBlack"}
-                  icon={<SiPython size={20} />}
-                >
-                  Python
-                </LanguageBadge>
-              </li>
-            </ul>
-          </div> */}
-      </div>
+          <div className="w-3/5 flex justify-center">
+            <div className="h-96 w-72 bg-slate-300/30 animate-pulse"></div>
+          </div>
+        </div>
       </div>
     </section>
   );
