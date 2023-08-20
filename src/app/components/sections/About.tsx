@@ -27,27 +27,57 @@ export const About = () => {
         </div>
         <div className="flex flex-row justify-center gap-10 ">
           <div className="w-2/3 flex flex-col gap-10">
-            <ul className="flex flex-row gap-8">
-              <li onClick={()=>setCurrCategory(category.Languages)} className="cursor-pointer font-medium py-1">Languages</li>
-              <li onClick={()=>setCurrCategory(category.Frontend)} className="cursor-pointer font-medium py-1">Frontend</li>
-              <li onClick={()=>setCurrCategory(category.Backend)}  className="cursor-pointer font-medium py-1">Backend</li>
-              <li onClick={()=>setCurrCategory(category.Tools)} className="cursor-pointer font-medium py-1">Tools</li>
-            </ul>
-            <div className="">
+            <div className="flex flex-row gap-8">
+              <div onClick={()=>{
+                setActiveSwiper(0)
+                swiper.slideTo(0)
+                }}
+                className={`cursor-pointer transition-colors duration-200 font-medium py-1 flex flex-col gap-2 after:h-[2px] after:bg-myBlue1 after:transition-transform hover:text-myBlue1 `+(
+                  activeSwiper === 0 ? "after:scale-x-100 text-myBlue1" : "after:scale-x-0"
+                )}>
+                  Languages</div>
+              <div onClick={()=>{
+                setActiveSwiper(1)
+                swiper.slideTo(1)
+                }}
+                className={`cursor-pointer transition-colors duration-200 font-medium py-1 flex flex-col gap-2 after:h-[2px] after:bg-myBlue1 after:transition-transform hover:text-myBlue1 `+(
+                  activeSwiper === 1 ? "after:scale-x-100 text-myBlue1" : "after:scale-x-0"
+                )}>
+                  Frontend</div>
+              <div onClick={()=>{
+                setActiveSwiper(2)
+                swiper.slideTo(2)
+                }}
+                className={`cursor-pointer transition-colors duration-200 font-medium py-1 flex flex-col gap-2 after:h-[2px] after:bg-myBlue1 after:transition-transform hover:text-myBlue1 `+(
+                  activeSwiper === 2 ? "after:scale-x-100 text-myBlue1" : "after:scale-x-0"
+                )}>
+                  Backend</div>
+              <div onClick={()=>{
+                setActiveSwiper(3)
+                swiper.slideTo(3)
+                }}
+                className={`cursor-pointer transition-colors duration-200 font-medium py-1 flex flex-col gap-2 after:h-[2px] after:bg-myBlue1 after:transition-transform hover:text-myBlue1 `+(
+                  activeSwiper === 3 ? "after:scale-x-100 text-myBlue1" : "after:scale-x-0"
+                )}>
+                  Tools</div>
+            </div>
+            <div className="min-h-[20vw] bg-red-500/25">
               <Swiper
                 slidesPerView={1}
                 spaceBetween={100}
                 className="w-[90%] !overflow-y-visible"
                 grabCursor
                 onSwiper={setSwiper}
-                onSlideChange={(swiper)=>console.log(swiper.activeIndex)}
+                onSlideChange={(swiper)=>setActiveSwiper(swiper.activeIndex)}
               >
                 <SwiperSlide>
+                  <div className=" bg-red-500/25">
                     <div className="grid grid-cols-3 text-center gap-y-8">
                       {category.Languages.map((item, index)=>{
                         return <LanguageBadge key={index} color={item.color ? item.color : "bg-myWhite text-myBlack"} icon={item.icon}>{item.title}</LanguageBadge>
                       })}
                     </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide >
                   <div className="grid grid-cols-3 text-center gap-y-8">
