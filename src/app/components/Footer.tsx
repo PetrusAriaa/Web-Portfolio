@@ -42,19 +42,22 @@ export const Footer = () => {
       <section id="Socials" className="py-4 mt-4">
         <div className="flex flex-row justify-center items-center gap-10">
           <Link
-            href={"#"}
+            target="_blank"
+            href="https://github.com/PetrusAriaa"
             className="p-3 rounded-full transition-colors duration-200 hover:bg-slate-800 active:scale-95 focus:outline focus:outline-2 focus:outline-myBlue1 focus:outline-offset-2"
           >
             <SiGithub color="#6BE7F1" size={25} />
           </Link>
           <Link
-            href={"#"}
+            target="_blank"
+            href="https://www.linkedin.com/in/petrus-aria-chevalier-rambing-92423a221/"
             className="p-3 rounded-full transition-colors duration-200 hover:bg-slate-800 active:scale-95 focus:outline focus:outline-2 focus:outline-myBlue1 focus:outline-offset-2"
           >
             <SiLinkedin color="#6BE7F1" size={25} />
           </Link>
           <Link
-            href={"#"}
+            target="_blank"
+            href="https://www.instagram.com/petrusaria25"
             className="p-3 rounded-full transition-colors duration-200 hover:bg-slate-800 active:scale-95 focus:outline focus:outline-2 focus:outline-myBlue1 focus:outline-offset-2"
           >
             <SiInstagram color="#6BE7F1" size={25} />
