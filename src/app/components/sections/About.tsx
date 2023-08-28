@@ -13,13 +13,13 @@ export const About = () => {
   const [swiper, setSwiper] = useState<any>(null);
   const [activeSwiper, setActiveSwiper] = useState(0);
   return (
-    <section
-      id="about"
-      className="relative py-20 -mt-2 md:py-10 lg:py-0 lg:mt-0 z-[20] bg-myBlack flex flex-col items-center justify-center min-h-[50rem]"
-    >
+    <section className="relative py-20 -mt-2 md:py-10 lg:py-0 lg:mt-0 z-[20] bg-myBlack flex flex-col items-center justify-center min-h-[50rem]">
       <div className="w-4/5 md:max-w-[75rem] flex flex-col gap-5 lg:gap-4 py-10 lg:py-20">
         <div className="flex flex-col gap-4">
-          <h1 className="text-myBlue1 text-3xl font-semibold md:text-5xl">
+          <h1
+            id="about"
+            className="text-myBlue1 text-3xl font-semibold md:text-5xl"
+          >
             Backstory
           </h1>
           <h1 className="text-myWhite font-normal text-sm md:text-base lg:text-lg">
