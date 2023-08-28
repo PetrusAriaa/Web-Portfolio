@@ -1,10 +1,10 @@
-"use client"
-import { Footer } from "./components/Footer";
-import { Navbar } from "./components/Navbar";
-import { About } from "./components/sections/About";
-import { Projects } from "./components/sections/Projects";
-import { Hero } from "./components/sections/Hero";
-import { ParallaxProvider } from "react-scroll-parallax";
+"use client";
+import {Footer} from "./components/Footer";
+import {Navbar} from "./components/Navbar";
+import {About} from "./components/sections/About";
+import {Projects} from "./components/sections/Projects";
+import {Hero} from "./components/sections/Hero";
+import {ParallaxProvider} from "react-scroll-parallax";
 
 export default function Home() {
   return (
@@ -17,5 +17,5 @@ export default function Home() {
         <Footer />
       </main>
     </ParallaxProvider>
-  )
+  );
 }
