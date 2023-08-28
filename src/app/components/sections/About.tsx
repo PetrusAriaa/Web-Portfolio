@@ -7,6 +7,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
 import Me2 from "../../../../public/assets/Me2.svg";
+import {FiChevronLeft, FiChevronRight} from "react-icons/fi";
 
 export const About = () => {
   const [swiper, setSwiper] = useState<any>(null);
@@ -14,9 +15,9 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="relative py-20 -mt-2 md:py-10 lg:py-0 lg:mt-0 z-[20] bg-myBlack flex flex-col items-center justify-center min-h-screen"
+      className="relative py-20 -mt-2 md:py-10 lg:py-0 lg:mt-0 z-[20] bg-myBlack flex flex-col items-center justify-center min-h-[50rem]"
     >
-      <div className="w-4/5 flex flex-col gap-5 lg:gap-4 ">
+      <div className="w-4/5 md:max-w-[75rem] flex flex-col gap-5 lg:gap-4 py-10 lg:py-20">
         <div className="flex flex-col gap-4">
           <h1 className="text-myBlue1 text-3xl font-semibold md:text-5xl">
             Backstory
@@ -28,7 +29,7 @@ export const About = () => {
             anytime.
           </h1>
         </div>
-        <div className="flex flex-col-reverse md:flex-row justify-center gap-10 lg:h-[60vh]">
+        <div className="flex flex-col-reverse md:flex-row justify-center gap-10 lg:h-fit">
           {/* Swiper */}
           <div className="w-full md:w-2/3 flex flex-col gap-6 lg:gap-10">
             <div className="flex flex-row justify-center md:justify-start gap-4 lg:gap-8">
@@ -89,7 +90,7 @@ export const About = () => {
                 Tools
               </div>
             </div>
-            <div className="h-full">
+            <div className="h-full flex flex-row items-center ">
               <Swiper
                 slidesPerView={1}
                 spaceBetween={100}
@@ -99,7 +100,7 @@ export const About = () => {
                 onSlideChange={(swiper) => setActiveSwiper(swiper.activeIndex)}
               >
                 <SwiperSlide>
-                  <div className="grid grid-cols-3 text-center gap-2 md:gap-y-4 md:gap-x-5 lg:gap-y-8 lg:gap-x-10">
+                  <div className="grid grid-cols-2 md:grid-cols-3 text-center gap-2 md:gap-y-4 md:gap-x-5 lg:gap-y-8 lg:gap-x-10">
                     {category.Languages.map((item, index) => {
                       return (
                         <LanguageBadge
@@ -116,7 +117,7 @@ export const About = () => {
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="grid grid-cols-3 text-center gap-2 md:gap-y-4 md:gap-x-5 lg:gap-y-8 lg:gap-x-10">
+                  <div className="grid grid-cols-2 md:grid-cols-3 text-center gap-2 md:gap-y-4 md:gap-x-5 lg:gap-y-8 lg:gap-x-10">
                     {category.Frontend.map((item, index) => {
                       return (
                         <LanguageBadge
@@ -133,7 +134,7 @@ export const About = () => {
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="grid grid-cols-3 text-center gap-2 md:gap-y-4 md:gap-x-5 lg:gap-y-8 lg:gap-x-10">
+                  <div className="grid grid-cols-2 md:grid-cols-3 text-center gap-2 md:gap-y-4 md:gap-x-5 lg:gap-y-8 lg:gap-x-10">
                     {category.Backend.map((item, index) => {
                       return (
                         <LanguageBadge
@@ -150,7 +151,7 @@ export const About = () => {
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="grid grid-cols-3 text-center gap-2 md:gap-y-4 md:gap-x-5 lg:gap-y-8 lg:gap-x-10">
+                  <div className="grid grid-cols-2 md:grid-cols-3 text-center gap-2 md:gap-y-4 md:gap-x-5 lg:gap-y-8 lg:gap-x-10">
                     {category.Tools.map((item, index) => {
                       return (
                         <LanguageBadge
@@ -168,9 +169,39 @@ export const About = () => {
                 </SwiperSlide>
               </Swiper>
             </div>
+            <div className="hidden md:flex justify-around">
+              <button
+                className="transition-colors duration-200 hover:bg-slate-200/10 active:bg-slate-200/25 p-2 rounded-full flex justify-center items-center"
+                onClick={() => {
+                  if (activeSwiper === 0) {
+                    setActiveSwiper(3);
+                    swiper.slideTo(3);
+                  } else {
+                    setActiveSwiper(activeSwiper - 1);
+                    swiper.slideTo(activeSwiper - 1);
+                  }
+                }}
+              >
+                <FiChevronLeft size={30} className="text-myWhite" />
+              </button>
+              <button
+                className="transition-colors duration-200 hover:bg-slate-200/10 active:bg-slate-200/25 p-2 rounded-full flex justify-center items-center"
+                onClick={() => {
+                  if (activeSwiper === 3) {
+                    setActiveSwiper(0);
+                    swiper.slideTo(0);
+                  } else {
+                    setActiveSwiper(activeSwiper + 1);
+                    swiper.slideTo(activeSwiper + 1);
+                  }
+                }}
+              >
+                <FiChevronRight size={30} className="text-myWhite" />
+              </button>
+            </div>
           </div>
           {/* Image */}
-          <div className="flex justify-center w-full h-44 md:h-64">
+          <div className="flex justify-center w-full max-h-36 md:max-h-72">
             <Image src={Me2} alt="" />
           </div>
         </div>
