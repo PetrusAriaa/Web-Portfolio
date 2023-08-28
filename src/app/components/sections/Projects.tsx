@@ -1,12 +1,13 @@
 import Link from "next/link";
+import {ProjectCard} from "../ui/ProjectCard";
 
 export const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full min-h-screen flex flex-col items-center justify-center"
+      className="w-full min-h-[50rem] flex flex-col items-center justify-center pb-20"
     >
-      <div className="w-4/5 flex flex-col gap-4">
+      <div className="w-4/5 md:max-w-[75rem] flex flex-col gap-4">
         <div className="flex flex-col gap-4">
           <h1 className="text-myBlue1 text-3xl font-semibold md:text-5xl">
             Recent Works
@@ -22,10 +23,25 @@ export const Projects = () => {
             </button>
           </Link>
         </div>
-        <div className="flex flex-col md:flex-row gap-4">
-          <div className="w-full aspect-video bg-slate-500/50 animate-pulse"></div>
-          <div className="w-full aspect-video bg-slate-500/50 animate-pulse"></div>
-          <div className="w-full aspect-video bg-slate-500/50 animate-pulse"></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <ProjectCard
+            img="/projects/Screenshot from 2023-08-28 20-54-10.png"
+            title="PPSMB Kesatria 2023"
+            desc="PPSMB Kesatria adventure – a project where I proudly put on my web developer cape! Picture this: a journey filled with lines of code, pixels coming to life, and a sprinkle of tech wizardry. As the web developer of 'PPSMB Kesatria,' I was like a modern-day digital bard, crafting an interactive symphony for users to dance through."
+            stack={["aaa"]}
+          />
+          <ProjectCard
+            img="/projects/Screenshot from 2023-08-28 20-54-10.png"
+            title="PPSMB Kesatria 2023"
+            desc="PPSMB Kesatria adventure – a project where I proudly put on my web developer cape! Picture this: a journey filled with lines of code, pixels coming to life, and a sprinkle of tech wizardry. As the web developer of 'PPSMB Kesatria,' I was like a modern-day digital bard, crafting an interactive symphony for users to dance through."
+            stack={["aaa"]}
+          />
+          <ProjectCard
+            img="/projects/Screenshot from 2023-08-28 20-54-10.png"
+            title="PPSMB Kesatria 2023"
+            desc="PPSMB Kesatria adventure – a project where I proudly put on my web developer cape! Picture this: a journey filled with lines of code, pixels coming to life, and a sprinkle of tech wizardry. As the web developer of 'PPSMB Kesatria,' I was like a modern-day digital bard, crafting an interactive symphony for users to dance through."
+            stack={["aaa"]}
+          />
         </div>
       </div>
     </section>
