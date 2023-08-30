@@ -9,7 +9,7 @@ export const Footer = () => {
       id="footer"
       className="pt-16 w-full flex flex-col justify-center items-center bg-myBlack2"
     >
-      <div className="w-4/5 flex flex-col gap-8">
+      <div className="md:min-w-[75rem] flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <h1 className="text-myBlue1 font-bold text-5xl md:text-7xl">
             Petrus Aria
