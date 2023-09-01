@@ -1,7 +1,21 @@
 import Link from "next/link";
 import {ProjectCard} from "../ui/ProjectCard";
 
+import PocketBase from "pocketbase";
+import {useEffect} from "react";
+
 export const Projects = () => {
+  const pb = new PocketBase("https://mashed-potato.pockethost.io");
+
+  const getProjectsData = async () => {
+    const res = await pb.collection("projects").getFullList();
+
+    console.log(res);
+  };
+
+  useEffect(() => {
+    getProjectsData();
+  }, []);
   return (
     <section
       id="projects"
