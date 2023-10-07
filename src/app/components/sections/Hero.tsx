@@ -2,13 +2,33 @@
 import Image from "next/image";
 import {useParallax} from "react-scroll-parallax";
 import {FiArrowDown} from "react-icons/fi";
-import {Link} from "react-scroll";
+import {scroller} from "react-scroll";
 
 import Avatar from "../../../../public/assets/Me.svg";
 import Lightning1 from "../../../../public/assets/Lightning1.svg";
 import Lightning2 from "../../../../public/assets/Lightning2.svg";
 import Lightning3 from "../../../../public/assets/Lightning3.svg";
 import Boulder from "../../../../public/assets/Border.svg";
+
+const ScrollButton = () => {
+  const handleScroll = () =>
+    scroller.scrollTo("about", {
+      duration: 1500,
+      delay: 100,
+      smooth: "easeInOut",
+      offset: -110,
+    });
+  return (
+    <section className="flex relative z-[49]">
+      <button
+        onClick={handleScroll}
+        className="m-auto animate-bounce bg-slate-400/50 p-3 rounded-full"
+      >
+        <FiArrowDown size={30} />
+      </button>
+    </section>
+  );
+};
 
 export const Hero = () => {
   const avatar = useParallax<HTMLImageElement>({
@@ -72,20 +92,8 @@ export const Hero = () => {
               {"and I'm a Website Developer"}
             </h1>
           </div>
-          <Link
-            to={"about"}
-            smooth
-            duration={(dist) => {
-              return dist;
-            }}
-            offset={-100}
-          >
-            <div className="flex relative z-[49]">
-              <button className="m-auto animate-bounce bg-slate-400/50 p-3 rounded-full">
-                <FiArrowDown size={30} />
-              </button>
-            </div>
-          </Link>
+
+          <ScrollButton />
           <div className="w-full h-0 sm:h-16 md:h-56"></div>
         </div>
       </div>
