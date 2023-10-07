@@ -5,7 +5,7 @@ export const Navbar = () => {
     <nav className="text-myWhite top-0 z-[999] sticky bg-myBlack/50 backdrop-blur-sm border-b border-b-myWhite/25">
       <ul className="hidden md:flex flex-row justify-center items-center py-4 px-78 space-x-24 text-lg font-medium">
         <li>
-          <Link href={"/about"}>
+          <Link href={"/"}>
             <button className="hover:text-myBlue1">About</button>
           </Link>
         </li>
@@ -15,8 +15,8 @@ export const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link href={"/contact"}>
-            <button className="hover:text-myBlue1">Contact</button>
+          <Link href={"/knowme"}>
+            <button className="hover:text-myBlue1">Know Me</button>
           </Link>
         </li>
         <li>
