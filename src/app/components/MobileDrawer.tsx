@@ -41,16 +41,16 @@ export const MobileDrawer = () => {
           {name: "Know Me", link: "/knowme"},
           {name: "Blog", link: "/blog"},
         ].map((item, i) => (
-          <ListItem key={i} disablePadding>
-            <ListItemButton
-              onClick={toggleDrawer(false)}
-              className="hover:bg-myBlue1/25 hover:text-myBlue1"
-            >
-              <Link href={item.link}>
+          <Link href={item.link} key={i}>
+            <ListItem disablePadding>
+              <ListItemButton
+                onClick={toggleDrawer(false)}
+                className="hover:bg-myBlue1/25 hover:text-myBlue1"
+              >
                 <ListItemText primary={item.name} />
-              </Link>
-            </ListItemButton>
-          </ListItem>
+              </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Box>
