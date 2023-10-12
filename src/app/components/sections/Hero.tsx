@@ -56,30 +56,30 @@ export const Hero = () => {
         ref={avatar.ref}
         src={Avatar}
         alt="My Avatar"
-        className="absolute w-screen bottom-0"
+        className="absolute w-screen bottom-0 select-none"
       />
       <Image
         ref={lightning1.ref}
         src={Lightning1}
         alt="lightning1"
-        className="absolute z-[43] bottom-0"
+        className="absolute z-[43] bottom-0 select-none"
       />
       <Image
         ref={lightning2.ref}
         src={Lightning2}
         alt="lightning2"
-        className="absolute z-[42] w-screen bottom-0"
+        className="absolute z-[42] w-screen bottom-0 select-none"
       />
       <Image
         ref={lightning3.ref}
         src={Lightning3}
         alt="lightning3"
-        className="absolute z-[41] w-screen bottom-0"
+        className="absolute z-[41] w-screen bottom-0 select-none"
       />
       <Image
         src={Boulder}
         alt="boulder"
-        className="absolute z-40 w-screen bottom-0"
+        className="absolute z-40 w-screen bottom-0 select-none"
       />
       <div className="z-[47] w-2/3 flex flex-col justify-center items-center absolute">
         <div className="flex flex-col gap-8 relative">
