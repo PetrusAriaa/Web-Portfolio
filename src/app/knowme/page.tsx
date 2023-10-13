@@ -1,16 +1,9 @@
 import Image from "next/image";
-import ComingSoon from "../components/ComingSoon";
 import {Footer} from "../components/Footer";
 import {Navbar} from "../components/Navbar";
 import Profile from "../../../public/assets/Profile.png";
 
 export default function KnowMe() {
-  const isReady = false;
-
-  if (isReady) {
-    return <ComingSoon />;
-  }
-
   return (
     <div className="bg-myBlack">
       <Navbar />
@@ -27,7 +20,7 @@ export default function KnowMe() {
             </div>
             <div className="relative">
               <div className="relative aspect-square h-56 md:h-64 lg:h-96 m-auto md:m-0">
-                <Image src={Profile} fill alt="profile-pict" />
+                <Image src={Profile} fill alt="profile-pict" priority />
               </div>
             </div>
           </div>
