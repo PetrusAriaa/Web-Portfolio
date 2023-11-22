@@ -3,8 +3,9 @@
 import {LanguageBadge} from "../ui/LanguageBadge";
 import {useState} from "react";
 import {category} from "./category";
-import {Swiper, SwiperSlide} from "swiper/react";
-import "swiper/css";
+import {Card} from "@nextui-org/react";
+// import {Swiper, SwiperSlide} from "swiper/react";
+// import "swiper/css";
 import Image from "next/image";
 import Me2 from "../../../../public/assets/Me2.svg";
 import {FiChevronLeft, FiChevronRight} from "react-icons/fi";
@@ -13,8 +14,8 @@ export const About = () => {
   const [swiper, setSwiper] = useState<any>(null);
   const [activeSwiper, setActiveSwiper] = useState(0);
   return (
-    <section className="relative py-20 -mt-2 md:py-10 lg:py-0 lg:mt-0 z-[20] bg-myBlack flex flex-col items-center justify-center min-h-[50rem]">
-      <div className="w-4/5 md:max-w-[75rem] flex flex-col gap-5 lg:gap-4 py-10 lg:py-20">
+    <section className="relative py-20 -mt-2 md:py-10 lg:py-0 lg:mt-0 z-[20] bg-myBlack2 flex flex-col items-center justify-center min-h-[50rem]">
+      <Card className="w-4/5 md:max-w-[75rem] flex flex-col gap-5 lg:gap-4 py-10 lg:px-10 lg:py-20 bg-myBlack">
         <div className="flex flex-col gap-4">
           <h1
             id="about"
@@ -91,7 +92,7 @@ export const About = () => {
               </div>
             </div>
             <div className="h-full flex flex-row items-center ">
-              <Swiper
+              {/* <Swiper
                 slidesPerView={1}
                 spaceBetween={100}
                 className="!overflow-y-visible h-full"
@@ -167,7 +168,7 @@ export const About = () => {
                     })}
                   </div>
                 </SwiperSlide>
-              </Swiper>
+              </Swiper> */}
             </div>
             <div className="hidden md:flex justify-around">
               <button
@@ -205,7 +206,7 @@ export const About = () => {
             <Image src={Me2} alt="" />
           </div>
         </div>
-      </div>
+      </Card>
     </section>
   );
 };

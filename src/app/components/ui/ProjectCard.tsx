@@ -1,9 +1,14 @@
 "use client";
 
-import Image from "next/image";
 import {FC} from "react";
-import Link from "next/link";
-import {useState} from "react";
+import {
+  Card,
+  CardBody,
+  CardFooter,
+  Link,
+  Button,
+  Image,
+} from "@nextui-org/react";
 
 interface projectCard {
   img: string;
@@ -19,40 +24,42 @@ export const ProjectCard: FC<projectCard> = ({
   desc,
   stack,
   projectLink,
-  ...props
 }) => {
-  const [isHover, setIsHover] = useState<boolean>(false);
-
   return (
-    <Link
-      href={projectLink}
-      target="_blank"
-      className="p-4 flex flex-col min-h-[20rem] md:min-h-[25rem] gap-8 hover:bg-myWhite/5 transition-colors duration-500"
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
+    <Card
+      isHoverable
+      isPressable
+      className="py-4 w-[20rem] dark md:flex-shrink-0"
     >
-      <div className="relative aspect-video w-full overflow-hidden">
-        <Image
-          src={img}
-          alt=""
-          fill
-          className={
-            "object-contain transition-transform duration-500 " +
-            (isHover ? "scale-110" : "scale-100")
-          }
-        />
-      </div>
-      <div className="flex flex-col justify-between min-h-fit md:min-h-[10rem]">
-        <div>
-          <h1 className="text-myWhite text-lg md:text-2xl font-semibold">
-            {title}
-          </h1>
-          <p className="text-myWhite/30 line-clamp-2 md:line-clamp-3">{desc}</p>
+      <CardBody className="py-2 w-4/5">
+        {/* <Skeleton> */}
+        <div className="relative aspect-video">
+          <Image
+            isZoomed
+            alt="Card background"
+            className="object-cover rounded-xl"
+            src={img}
+          />
         </div>
-        <div className="flex justify-end py-4 gap-4">
-          <button className="text-myBlue1 hover:underline">Visit</button>
+        {/* </Skeleton> */}
+      </CardBody>
+      <CardFooter className="pb-0 pt-2 px-4 flex-col relative items-start w-4/5">
+        <h4 className="font-bold text-large">{title}</h4>
+        <small className="text-default-500 line-clamp-1 text-left">
+          {desc}
+        </small>
+        <div className="w-full flex justify-end py-4">
+          <Button
+            href={projectLink}
+            as={Link}
+            showAnchorIcon
+            variant="solid"
+            className="bg-myBlue1"
+          >
+            Inspect
+          </Button>
         </div>
-      </div>
-    </Link>
+      </CardFooter>
+    </Card>
   );
 };
