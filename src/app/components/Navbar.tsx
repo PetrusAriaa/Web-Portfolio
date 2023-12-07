@@ -1,5 +1,15 @@
 import Link from "next/link";
+import {scroller} from "react-scroll";
 import {MobileDrawer} from "./MobileDrawer";
+
+const handleScroll = (target: string) => {
+  scroller.scrollTo(target, {
+    duration: 1500,
+    delay: 100,
+    smooth: "easeInOut",
+    offset: -110,
+  });
+};
 
 export const Navbar = () => {
   return (
@@ -7,19 +17,28 @@ export const Navbar = () => {
       <nav className="text-myWhite top-0 z-[999] sticky bg-transparent md:bg-myBlack/50 backdrop-blur-0 md:backdrop-blur-sm border-0 md:border-b md:border-b-myWhite/25">
         <ul className="hidden md:flex flex-row justify-center items-center py-4 px-78 space-x-24 text-lg font-medium">
           <li>
-            <Link href={"/"}>
-              <button className="hover:text-myBlue1">About</button>
-            </Link>
+            <button
+              onClick={() => handleScroll("hero")}
+              className="hover:text-myBlue1"
+            >
+              About
+            </button>
           </li>
           <li>
-            <Link href={"/projects"}>
-              <button className="hover:text-myBlue1">Projects</button>
-            </Link>
+            <button
+              onClick={() => handleScroll("about")}
+              className="hover:text-myBlue1"
+            >
+              Know Me
+            </button>
           </li>
           <li>
-            <Link href={"/knowme"}>
-              <button className="hover:text-myBlue1">Know Me</button>
-            </Link>
+            <button
+              onClick={() => handleScroll("projects")}
+              className="hover:text-myBlue1"
+            >
+              Projects
+            </button>
           </li>
           <li>
             <Link href={"/blog"}>

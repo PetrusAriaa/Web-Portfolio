@@ -49,6 +49,7 @@ export const Hero = () => {
   });
   return (
     <section
+      id="hero"
       about="jumbotron"
       className="relative overflow-hidden z-[10] py-56 md:py-72 flex flex-col items-center justify-center text-myWhite font-semibold min-h-screen w-full"
     >

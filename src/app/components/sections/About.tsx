@@ -16,12 +16,12 @@ export const About = () => {
   return (
     <section className="relative py-20 -mt-2 md:py-10 lg:py-0 lg:mt-0 z-[20] px-0 md:px-10 bg-myBlack flex flex-col items-center justify-center md:min-h-[35rem] lg:min-h-[50rem]">
       <div className="flex flex-col-reverse px-2 md:flex-row items-center justify-center w-full md:w-[90%]">
-        <Card className="relative z-10 w-full md:w-[90%] md:max-w-[70rem] flex flex-row gap-5 lg:gap-4 px-4 py-2 md:px-10 md:py-20 bg-transparent backdrop-blur-md bg-gradient-to-bl from-myBlack2/30 to-myBlue1/10 border-t-2 border-r-2 border-myBlue1/30 shadow-myBlue1/20 shadow-lg md:drop-shadow-lg">
+        <Card
+          id="about"
+          className="relative z-10 w-full md:w-[90%] md:max-w-[70rem] flex flex-row gap-5 lg:gap-4 px-4 py-2 md:px-10 md:py-20 bg-transparent backdrop-blur-md bg-gradient-to-bl from-myBlack2/30 to-myBlue1/10 border-t-2 border-r-2 border-myBlue1/30 shadow-myBlue1/20 shadow-lg md:drop-shadow-lg"
+        >
           <div className="flex flex-col gap-4 w-full md:w-4/5">
-            <h1
-              id="about"
-              className="text-myBlue1 text-3xl font-semibold md:text-5xl"
-            >
+            <h1 className="text-myBlue1 text-3xl font-semibold md:text-5xl">
               Backstory
             </h1>
             <h1 className="text-myWhite font-normal text-sm md:text-base lg:text-lg">
