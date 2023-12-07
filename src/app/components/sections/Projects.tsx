@@ -1,4 +1,4 @@
-import Link from "next/link";
+import {Link, Button} from "@nextui-org/react";
 import {ProjectCard} from "../ui/ProjectCard";
 import PocketBase from "pocketbase";
 
@@ -18,13 +18,16 @@ export const Projects = () => {
           </h1>
         </div>
         <div className="flex flex-row justify-end">
-          <Link href={"/projects"}>
-            <button className="bg-myBlue1 px-5 py-1 rounded-md text-sm font-medium select-none">
-              More
-            </button>
-          </Link>
+          <Button
+            href="/"
+            as={Link}
+            variant="solid"
+            className="bg-myBlue1 dark"
+          >
+            More
+          </Button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:flex gap-4">
           <ProjectCard
             img="/projects/Screenshot from 2023-08-28 20-54-10.png"
             title="PPSMB Kesatria 2023"
