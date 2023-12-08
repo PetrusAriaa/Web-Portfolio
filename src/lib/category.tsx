@@ -19,7 +19,7 @@ import {
 } from "react-icons/si";
 
 export const CATEGORIES = {
-  LanguagesTools: [
+  "Languages & Tools": [
     {
       title: "Javascript",
       icon: <SiJavascript size={20} />,
