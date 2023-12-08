@@ -1,24 +1,23 @@
 import {FC, HTMLAttributes} from "react";
 
-interface LanguageBadgeProps extends HTMLAttributes<LanguageBadgeProps> {
+interface LanguageBadgeProps extends HTMLAttributes<HTMLButtonElement> {
   icon: any;
-  children: React.ReactNode;
-  color: string;
+  colorOption: string;
 }
 
 export const LanguageBadge: FC<LanguageBadgeProps> = ({
   icon,
-  children,
-  color,
+  colorOption,
+  ...props
 }) => {
   return (
-    <div className="flex flex-row justify-center items-center">
+    <div className="flex flex-row justify-center items-center w-full">
       <div
-        className={`${color} cursor-pointer flex flex-row justify-center items-center gap-2 py-1 min-w-fit w-4/5 md:w-full rounded-md`}
+        className={`${colorOption} cursor-pointer flex flex-row justify-center items-center gap-2 py-1 min-w-fit w-4/5 md:w-full rounded-md`}
       >
         <div>{icon}</div>
         <h1 className="select-none font-medium text-xs lg:text-base">
-          {children}
+          {props.children}
         </h1>
       </div>
     </div>

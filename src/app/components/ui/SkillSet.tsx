@@ -7,7 +7,7 @@ import "swiper/css";
 
 import SwiperContent from "./SwiperContent";
 import SkillCategoryButton from "./SkillCategoryButton";
-import {CATEGORIES} from "../sections/category";
+import {CATEGORIES} from "../category";
 import {Category} from "./SwiperContent";
 
 interface CategorySelectorProps {

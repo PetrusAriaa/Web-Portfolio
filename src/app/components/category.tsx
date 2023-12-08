@@ -1,4 +1,6 @@
 import {
+  SiHtml5,
+  SiCss3,
   SiJavascript,
   SiTypescript,
   SiPython,
@@ -9,26 +11,32 @@ import {
   SiNodedotjs,
   SiExpress,
   SiFlask,
-  SiMysql,
+  SiMongodb,
   SiPostgresql,
   SiSqlite,
   SiGit,
-  SiPostman,
   SiDocker,
   SiFigma,
+  SiLinux,
+  SiNginx,
 } from "react-icons/si";
 
 export const CATEGORIES = {
   "Languages & Tools": [
     {
+      title: "HTML",
+      icon: <SiHtml5 size={20} />,
+      color: "bg-[#DD4B25] text-myWhite",
+    },
+    {
+      title: "CSS",
+      icon: <SiCss3 size={20} />,
+      color: "bg-[#254BDD] text-myWhite",
+    },
+    {
       title: "Javascript",
       icon: <SiJavascript size={20} />,
       color: "bg-[#EFD81D] text-myBlack",
-    },
-    {
-      title: "Python",
-      icon: <SiPython size={20} />,
-      color: "bg-[#366C9C] text-myBlack",
     },
     {
       title: "Typescript",
@@ -36,24 +44,29 @@ export const CATEGORIES = {
       color: "bg-[#2F74C0] text-myWhite",
     },
     {
-      title: "Go",
-      icon: <SiGo size={20} />,
-      color: "bg-[#67D0DE] text-myBlack",
+      title: "Python",
+      icon: <SiPython size={20} />,
+      color: "bg-[#366C9C] text-myBlack",
     },
     {
-      title: "Git",
-      icon: <SiGit />,
-      color: "bg-[#E84D31] text-myBlack",
+      title: "Go",
+      icon: <SiGo size={20} />,
+      color: "bg-[#67D0DE] text-myWhite",
+    },
+    {
+      title: "Linux",
+      icon: <SiLinux />,
+      color: "bg-myWhite text-myBlack",
     },
     {
       title: "Docker",
       icon: <SiDocker />,
-      color: "bg-[#2391E6] text-myBlack",
+      color: "bg-[#2391E6] text-myWhite",
     },
     {
-      title: "Postman",
-      icon: <SiPostman />,
-      color: "bg-[#F56933] text-myWhite",
+      title: "Git",
+      icon: <SiGit />,
+      color: "bg-[#E84D31] text-myWhite",
     },
     {
       title: "Figma",
@@ -97,9 +110,9 @@ export const CATEGORIES = {
       color: "bg-[#3BA9BF] text-myBlack",
     },
     {
-      title: "MySQL",
-      icon: <SiMysql />,
-      color: "bg-[#005D88] text-myWhite",
+      title: "MongoDB",
+      icon: <SiMongodb />,
+      color: "bg-[#08EE69] text-[#082532]",
     },
     {
       title: "PostgreSQL",
@@ -109,7 +122,12 @@ export const CATEGORIES = {
     {
       title: "SQLite",
       icon: <SiSqlite />,
-      color: "text-[#31648C] bg-myWhite",
+      color: "bg-myWhite text-[#31648C]",
+    },
+    {
+      title: "NGINX",
+      icon: <SiNginx />,
+      color: "bg-[#08993F] text-myWhite",
     },
   ],
 };
