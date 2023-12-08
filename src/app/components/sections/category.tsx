@@ -18,7 +18,7 @@ import {
   SiFigma,
 } from "react-icons/si";
 
-export const category = {
+export const CATEGORIES = {
   LanguagesTools: [
     {
       title: "Javascript",
