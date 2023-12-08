@@ -22,7 +22,7 @@ export const Navbar = () => {
               onClick={() => handleScroll("hero")}
               className="hover:text-myBlue1"
             >
-              About
+              Home
             </button>
           </li>
           <li>
@@ -30,7 +30,7 @@ export const Navbar = () => {
               onClick={() => handleScroll("about")}
               className="hover:text-myBlue1"
             >
-              Know Me
+              About
             </button>
           </li>
           <li>
