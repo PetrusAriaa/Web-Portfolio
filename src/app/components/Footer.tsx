@@ -1,7 +1,8 @@
+import Link from "next/link";
+
 import {SiGithub, SiInstagram, SiLinkedin} from "react-icons/si";
 import {TbMail} from "react-icons/tb";
 import {GoLocation, GoOrganization} from "react-icons/go";
-import Link from "next/link";
 
 export const Footer = () => {
   return (

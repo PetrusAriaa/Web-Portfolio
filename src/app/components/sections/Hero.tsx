@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+
 import {useParallax} from "react-scroll-parallax";
 import {FiArrowDown} from "react-icons/fi";
 import {scroller} from "react-scroll";
@@ -49,6 +50,7 @@ export const Hero = () => {
   });
   return (
     <section
+      id="hero"
       about="jumbotron"
       className="relative overflow-hidden z-[10] py-56 md:py-72 flex flex-col items-center justify-center text-myWhite font-semibold min-h-screen w-full"
     >
@@ -84,11 +86,11 @@ export const Hero = () => {
       <div className="z-[47] w-2/3 flex flex-col justify-center items-center absolute">
         <div className="flex flex-col gap-8 relative">
           <div>
-            <h1 className="text-3xl md:text-5xl">Hi, traveller</h1>
-            <h1 className="text-myBlue1 font-bold text-5xl md:text-7xl">
+            <h1 className="text-xl md:text-3xl lg:text-5xl">Hi, traveller</h1>
+            <h1 className="text-myBlue1 font-bold text-3xl md:text-5xl lg:text-7xl">
               {"I'm Petrus Aria"}
             </h1>
-            <h1 className="text-3xl md:text-5xl">
+            <h1 className="text-xl md:text-3xl lg:text-5xl">
               {"and I'm a Website Developer"}
             </h1>
           </div>

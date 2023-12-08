@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import {
   Drawer,
   DrawerBody,
@@ -10,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import {Button} from "@nextui-org/react";
 import {MdDensityMedium} from "react-icons/md";
-import Link from "next/link";
+
 export const MobileDrawer = () => {
   const {isOpen, onOpen, onClose} = useDisclosure();
 
