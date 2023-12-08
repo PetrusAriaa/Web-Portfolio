@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+
 import {useParallax} from "react-scroll-parallax";
 import {FiArrowDown} from "react-icons/fi";
 import {scroller} from "react-scroll";

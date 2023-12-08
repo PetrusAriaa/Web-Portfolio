@@ -1,6 +1,8 @@
 import {Link, Button} from "@nextui-org/react";
-import {ProjectCard} from "../ui/ProjectCard";
+
 import PocketBase from "pocketbase";
+
+import {ProjectCard} from "../ui/ProjectCard";
 
 export const Projects = () => {
   return (

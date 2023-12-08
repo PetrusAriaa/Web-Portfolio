@@ -4,6 +4,7 @@ import {useState} from "react";
 
 import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
+
 import SwiperContent from "./SwiperContent";
 import SkillCategoryButton from "./SkillCategoryButton";
 

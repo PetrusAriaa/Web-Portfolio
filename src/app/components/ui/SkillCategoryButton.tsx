@@ -1,4 +1,5 @@
 "use client";
+
 import {useEffect, useState, FC, HTMLAttributes} from "react";
 
 interface SkillCategoryButtonProps extends HTMLAttributes<HTMLButtonElement> {

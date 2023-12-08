@@ -1,8 +1,12 @@
-import {Button, Card} from "@nextui-org/react";
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+
+import {Button, Card} from "@nextui-org/react";
+
 import Me2 from "../../../../public/assets/Me2.svg";
 import SkillSet from "../ui/SkillSet";
-import Link from "next/link";
 
 export const About = () => {
   return (

@@ -1,6 +1,7 @@
 import Image from "next/image";
-import Working from "../../../public/assets/Working.svg";
 import Link from "next/link";
+
+import Working from "../../../public/assets/Working.svg";
 
 export default function ComingSoon() {
   return (
