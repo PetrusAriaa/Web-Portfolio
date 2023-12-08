@@ -11,10 +11,10 @@ const SkillSet = () => {
   const [swiper, setSwiper] = useState<any>(null);
   const [activeSwiper, setActiveSwiper] = useState<number>(0);
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 w-full">
       <div
         about="navigation"
-        className="flex flex-row gap-2 md:gap-4 lg:gap-6 justify-center md:justify-left overflow-x-clip min-w-fit max-w-[40rem]"
+        className="flex flex-row gap-2 md:gap-4 lg:gap-6 justify-center lg:justify-start w-full"
       >
         <SkillCategoryButton
           onClick={() => {
@@ -23,7 +23,7 @@ const SkillSet = () => {
           }}
           activeSwiper={activeSwiper}
           buttonIndex={0}
-          title="Languages"
+          title="Languages & Tools"
         />
         <SkillCategoryButton
           onClick={() => {
@@ -32,7 +32,7 @@ const SkillSet = () => {
           }}
           activeSwiper={activeSwiper}
           buttonIndex={1}
-          title="Fronted"
+          title="Frontend"
         />
         <SkillCategoryButton
           onClick={() => {
@@ -43,16 +43,8 @@ const SkillSet = () => {
           buttonIndex={2}
           title="Backend"
         />
-        <SkillCategoryButton
-          onClick={() => {
-            setActiveSwiper(3);
-            swiper.slideTo(3);
-          }}
-          activeSwiper={activeSwiper}
-          buttonIndex={3}
-          title="Tools"
-        />
       </div>
+
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -62,7 +54,8 @@ const SkillSet = () => {
         onSlideChange={(swiper) => {
           setActiveSwiper(swiper.activeIndex);
         }}
-        className="h-unit-6xl max-w-[30rem] md:max-w-[25rem] bg-red-500/25 lg:max-w-[40rem]"
+        style={{width: "100%", height: "20rem"}}
+        className="bg-myBlack/50 rounded-md"
       >
         <SwiperSlide>
           <SwiperContent category="Languages" />
@@ -72,9 +65,6 @@ const SkillSet = () => {
         </SwiperSlide>
         <SwiperSlide>
           <SwiperContent category="Backend" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SwiperContent category="Tools" />
         </SwiperSlide>
       </Swiper>
     </div>

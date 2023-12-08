@@ -1,17 +1,10 @@
-"use client";
-
-import {LanguageBadge} from "../ui/LanguageBadge";
-import {useState} from "react";
-import {category} from "./category";
 import {Button, Card} from "@nextui-org/react";
 import Image from "next/image";
 import Me2 from "../../../../public/assets/Me2.svg";
-import {FiChevronLeft, FiChevronRight} from "react-icons/fi";
 import SkillSet from "../ui/SkillSet";
+import Link from "next/link";
 
 export const About = () => {
-  const [swiper, setSwiper] = useState<any>(null);
-  const [activeSwiper, setActiveSwiper] = useState(0);
   return (
     <section className="relative py-20 -mt-2 md:py-10 lg:py-0 lg:mt-0 z-[20] px-0 md:px-10 bg-myBlack flex flex-col items-center justify-center md:min-h-[35rem] lg:min-h-[50rem]">
       <div className="flex flex-col-reverse px-2 md:flex-row items-center justify-center w-full md:w-[90%]">
@@ -30,7 +23,9 @@ export const About = () => {
               anytime.
             </h1>
             <div className="flex flex-row justify-end md:justify-start">
-              <Button>Know me more!</Button>
+              <Button as={Link} href="/knowme">
+                Know me more!
+              </Button>
             </div>
           </div>
         </Card>
@@ -40,9 +35,11 @@ export const About = () => {
           className="p-8 w-[18rem] md:w-[20rem] lg:w-[36rem] relative md:-ml-36 lg:-ml-56 z-[11]"
         />
       </div>
-      <div className="w-full flex flex-row justify-center md:justify-end relative z-[13] px-2 py-8 md:p-0">
-        <div className="w-full md:w-[65%] min-w-fit rounded-lg md:-mt-32 p-4 bg-gradient-to-bl from-myBlack2/80 to-myBlue1/60 border-t-2 border-r-2 border-myBlue1/30 shadow-myBlue1/20 shadow-2xl transition-colors duration-1000">
-          <SkillSet />
+      <div className="w-full md:w-[90%] flex flex-row justify-start md:justify-center relative z-[13] px-2 py-8 md:p-0">
+        <div className="w-full flex justify-end max-w-[70rem]">
+          <Card className="bg-transparent w-full md:w-[65%] lg:w-[55%] min-w-[4rem] rounded-lg md:-mt-32 p-4 bg-gradient-to-bl from-myBlack2/80 to-myBlue1/60 border-t-2 border-r-2 border-myBlue1/30 shadow-myBlue1/20 shadow-2xl">
+            <SkillSet />
+          </Card>
         </div>
       </div>
       <div className="w-full absolute top-5">

@@ -28,13 +28,13 @@ const SkillCategoryButton: FC<SkillCategoryButtonProps> = ({
       <div className="relative">{title}</div>
       <div
         className={
-          "absolute w-full duration-200 ease-in-out bg-gradient-to-b from-myBlue1/50 to-transparent top-0 " +
+          "absolute w-full duration-200 ease-in-out bg-gradient-to-b from-myBlue1/50 to-transparent top-0 rounded-t-lg " +
           (openShader ? "h-8" : "h-0")
         }
       ></div>
       <div
         className={
-          "absolute w-full blur-sm duration-200 ease-in-out bg-gradient-to-b from-myBlue1/50 to-transparent top-0 " +
+          "absolute w-full blur-sm duration-200 ease-in-out bg-gradient-to-b from-myBlue1/50 to-transparent top-0 rounded-t-sm " +
           (openShader ? "h-8" : "h-0")
         }
       ></div>
