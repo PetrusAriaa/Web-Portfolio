@@ -1,8 +1,4 @@
-import {Link, Button} from "@nextui-org/react";
-
-import PocketBase from "pocketbase";
-
-import {ProjectCard} from "../ui/ProjectCard";
+import ProjectAlbum from "../ui/ProjectAlbum";
 
 export const Projects = () => {
   return (
@@ -19,32 +15,7 @@ export const Projects = () => {
             As a blacksmith, these are his projects
           </h1>
         </div>
-        <div className="flex flex-row justify-end">
-          <Button
-            href="/"
-            as={Link}
-            variant="solid"
-            className="bg-myBlue1 dark"
-          >
-            More
-          </Button>
-        </div>
-        <div className="grid grid-cols-1 md:flex gap-4">
-          <ProjectCard
-            img="/projects/Screenshot from 2023-08-28 20-54-10.png"
-            title="PPSMB Kesatria 2023"
-            desc="PPSMB Kesatria adventure – a project where I proudly put on my web developer cape! Picture this: a journey filled with lines of code, pixels coming to life, and a sprinkle of tech wizardry. As the web developer of 'PPSMB Kesatria,' I was like a modern-day digital bard, crafting an interactive symphony for users to dance through."
-            stack={["aaa"]}
-            projectLink="https://ppsmb-ft.vercel.app/"
-          />
-          <ProjectCard
-            img="/projects/Screenshot 2023-10-02 190111.png"
-            title="Komunitas Profesi GKIPI"
-            desc="Web Application for Komunitas Profesi GKIPI"
-            stack={["aaa"]}
-            projectLink="https://komunitasprofesigkipi.org/"
-          />
-        </div>
+        <ProjectAlbum />
       </div>
     </section>
   );
