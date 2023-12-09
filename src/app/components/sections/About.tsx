@@ -51,8 +51,8 @@ export const About = () => {
         </Card>
         <Image
           src={Me2}
-          alt=""
-          className="p-8 w-[18rem] md:w-[20rem] lg:w-[36rem] relative md:-ml-36 lg:-ml-56 z-[11]"
+          alt="avatar"
+          className="p-8 w-[18rem] md:w-[25rem] lg:w-[36rem] relative md:-ml-36 lg:-ml-56 z-[11] select-none"
         />
       </div>
       <div className="w-full md:w-[90%] flex flex-row justify-start md:justify-center relative z-[13] px-2 py-8 md:p-0">
