@@ -8,14 +8,11 @@ import {ProjectCardProps} from "./ProjectCard";
 const ProjectCardDesktop: FC<ProjectCardProps> = ({
   img,
   title,
-  desc,
-  stack,
-  projectLink,
   flexJustify,
   offset,
 }) => {
   return (
-    <div className={"w-full flex flex-row " + flexJustify}>
+    <div className={"w-full flex flex-row "}>
       <Tilt
         style={{
           transformStyle: "preserve-3d",
@@ -58,7 +55,7 @@ const ProjectCardDesktop: FC<ProjectCardProps> = ({
             style={{
               transformStyle: "preserve-3d",
             }}
-            className="py-2 w-max relative z-[0] ml-16"
+            className="py-2 relative z-[0] ml-16 w-[256px] h-[144px] md:w-[448px] md:h-[252px]"
           >
             <Image
               onLoad={() => <div className="bg-slate-200 animate-pulse"></div>}

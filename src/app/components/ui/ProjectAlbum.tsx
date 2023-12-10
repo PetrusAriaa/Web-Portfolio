@@ -3,7 +3,7 @@ import {ProjectCard} from "./ProjectCard";
 // TODO: Conditionally render album for mobile and desktop device
 const ProjectAlbum = () => {
   return (
-    <div className="w-4/5 md:max-w-[75rem] mt-10 relative">
+    <div className="mt-10 relative">
       <ProjectCard
         img="/projects/Screenshot from 2023-08-28 20-54-10.png"
         title="PPSMB Kesatria 2023"
@@ -21,6 +21,7 @@ const ProjectAlbum = () => {
         projectLink="https://komunitasprofesigkipi.org/"
         flexJustify="justify-center"
         offset="-mt-16 ml-16 z-[1]"
+        className="justify-start md:justify-end"
       />
     </div>
   );
