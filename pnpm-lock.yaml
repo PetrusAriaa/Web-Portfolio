@@ -56,6 +56,9 @@ dependencies:
   react-icons:
     specifier: ^4.10.1
     version: 4.12.0(react@18.2.0)
+  react-parallax-tilt:
+    specifier: ^1.7.176
+    version: 1.7.176(react-dom@18.2.0)(react@18.2.0)
   react-scroll:
     specifier: ^1.8.9
     version: 1.9.0(react-dom@18.2.0)(react@18.2.0)
@@ -71,9 +74,6 @@ dependencies:
   typescript:
     specifier: 5.1.6
     version: 5.1.6
-  vanilla-tilt:
-    specifier: ^1.8.1
-    version: 1.8.1
 
 devDependencies:
   '@types/react-scroll':
@@ -6152,6 +6152,16 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
 
+  /react-parallax-tilt@1.7.176(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-mhq7dLp2z+UVCjTSpxwJIKxppHdcDDDAhiu6brom2E7gxYLHEu//tA22gKIDLLD0X2DMoKHYzgAYx22+d3QXLw==}
+    peerDependencies:
+      react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /react-remove-scroll-bar@2.3.4(@types/react@18.2.14)(react@18.2.0):
     resolution: {integrity: sha512-63C4YQBUt0m6ALadE9XV56hV8BgJWDmmTPY758iIJjfQKt2nYwoUrPk0LXRXcB/yIj82T1/Ixfdpdk68LwIB0A==}
     engines: {node: '>=10'}
@@ -6845,10 +6855,6 @@ packages:
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
-
-  /vanilla-tilt@1.8.1:
-    resolution: {integrity: sha512-hPB1XUsnh+SIeVSW2beb5RnuFxz4ZNgxjGD78o52F49gS4xaoLeEMh9qrQnJrnEn/vjjBI7IlxrrXmz4tGV0Kw==}
-    dev: false
 
   /watchpack@2.4.0:
     resolution: {integrity: sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg==}
