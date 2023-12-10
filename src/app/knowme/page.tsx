@@ -3,13 +3,11 @@
 import Image from "next/image";
 
 import {Footer} from "../components/Footer";
-import {Navbar} from "../components/Navbar";
 import Profile from "../../../public/assets/Profile.png";
 
 export default function KnowMe() {
   return (
     <div className="bg-myBlack">
-      <Navbar />
       <main className="flex flex-col justify-center items-center">
         <div className="w-4/5 lg:w-3/5 md:max-w-[75rem] flex flex-col gap-16 md:gap-28 py-28">
           <div className="md:flex md:flex-row md:items-center">
