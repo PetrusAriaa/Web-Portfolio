@@ -16,9 +16,9 @@ const MediumNavbar = () => {
     <>
       <Navbar
         shouldHideOnScroll
-        className="text-myWhite flex justify-center bg-transparent md:bg-myBlack/80 backdrop-blur-0 md:backdrop-blur-sm border-0 md:border-b md:border-b-myWhite/25"
+        className="text-myWhite hidden md:flex justify-center bg-transparent md:bg-myBlack/80 backdrop-blur-0 md:backdrop-blur-sm border-0 md:border-b md:border-b-myWhite/25"
       >
-        <ul className="w-full hidden md:flex flex-row justify-center items-center py-4 px-78 space-x-24 text-lg font-medium">
+        <ul className="w-full flex flex-row justify-center items-center py-4 px-78 space-x-24 text-lg font-medium">
           <li>
             <button
               onClick={() => handleScroll("hero")}
