@@ -2,7 +2,7 @@
 
 import {Spinner} from "@chakra-ui/react";
 
-const OnPageLoading = () => {
+export default function Loading() {
   return (
     <>
       <div className="w-full h-screen flex flex-col gap-4 justify-center items-center bg-myBlack">
@@ -15,6 +15,4 @@ const OnPageLoading = () => {
       </div>
     </>
   );
-};
-
-export default OnPageLoading;
+}
