@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import {Navbar} from "@nextui-org/react";
+import {Button, Navbar} from "@nextui-org/react";
 import {scroller} from "react-scroll";
 
 const handleScroll = (target: string) => {
@@ -44,9 +44,9 @@ const MediumNavbar = () => {
             </button>
           </li>
           <li>
-            <Link href={"/blog"}>
-              <button className="hover:text-myBlue1">Blog</button>
-            </Link>
+            <Button as={Link} href="/login" className="bg-myBlue1 text-myBlack">
+              Login
+            </Button>
           </li>
         </ul>
       </Navbar>
