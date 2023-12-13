@@ -1,14 +1,28 @@
 "use client";
 
 import Image from "next/image";
+import {Button} from "@nextui-org/react";
+import {FiChevronLeft} from "react-icons/fi";
 
 import {Footer} from "../components/Footer";
 import Profile from "../../../public/assets/Profile.png";
+import Link from "next/link";
 
 export default function KnowMe() {
   return (
     <div className="bg-myBlack">
       <main className="flex flex-col justify-center items-center">
+        <div className="py-4">
+          <Button
+            as={Link}
+            href="/"
+            startContent={<FiChevronLeft size={20} />}
+            variant="ghost"
+            className="bg-transparent hover:!bg-myBlue1 text-myBlue1 border-myBlue1 hover:text-myBlack"
+          >
+            Back
+          </Button>
+        </div>
         <div className="w-4/5 lg:w-3/5 md:max-w-[75rem] flex flex-col gap-16 md:gap-28 py-28">
           <div className="md:flex md:flex-row md:items-center">
             <div className="flex flex-col gap-4 text-center md:text-left">
